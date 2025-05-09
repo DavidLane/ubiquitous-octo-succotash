@@ -6,7 +6,7 @@ use App\Payroll\PaydayCalculator\PaydayStrategyInterface;
 
 class SecondToLastBusinessDayStrategy implements PaydayStrategyInterface
 {
-    public function calculateEmployeePaydate(int $year, int $month): \DateTime
+    public function calculateEmployeePayDate(int $year, int $month): \DateTime
     {
         $payday = new \DateTime("last day of {$year}-{$month}");
         $payday->modify('-1 day');

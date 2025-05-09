@@ -17,7 +17,7 @@ class WorkingDayDelayDecorator implements PaydayStrategyInterface, HasCalculateE
         $this->workingDayDelay = $workingDayDelay;
     }
 
-    public function calculateEmployeePaydate(int $year, int $month): \DateTime
+    public function calculateEmployeePayDate(int $year, int $month): \DateTime
     {
         $this->employeePayDate = $this->baseStrategy->calculateEmployeePaydate($year, $month);
         return $this->employeePayDate;
