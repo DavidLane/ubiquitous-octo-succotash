@@ -9,10 +9,10 @@
 - View application in your browser - http://127.0.0.1 or http://localhost
 
 ## Unit Tests
-- Run `./vendor/bin/sail test` to run unit tests
+- Run `./vendor/bin/sail test` to run test suite
 
 ## Notes
-This application was built using Laravel purely as it was needed to be delivered under time constraints. It's incredible feature heavy given the limited nature of the task but it got it moving quickly. I could have also leant into the testing features more given the time.
+This application was built using Laravel purely as it was needed to be delivered under time constraints. It's incredible feature heavy given the limited nature of the task but it got it moving quickly.
 
 I chose to use VueJS simply as I'd worked with it before, although a little rusty.
 
@@ -20,4 +20,4 @@ I used an AI prompt to bounce solutions off - I knew a pattern would keep the co
 
 This is something I do a lot day to day, as well as things like prototype building. It's become hard to ignore the tooling ...
 
-Note the missing JS, Integration and E2E tests - I ran out of time, but happy to discuss their merits and place in the SDLC. 
+Note the missing JS and E2E tests - I ran out of time, but happy to discuss their merits and place in the SDLC. 

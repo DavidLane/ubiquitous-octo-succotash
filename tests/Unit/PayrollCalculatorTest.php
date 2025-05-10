@@ -34,4 +34,16 @@ class PayrollCalculatorTest extends TestCase
         $this->assertEquals($expectedEmployeePayDate, $result['employee_pay_date'], 'Incorrect employee pay date');
         $this->assertEquals($expectedEmployerPaymentDate, $result['employer_payment_date'], 'Incorrect employer payment date');
     }
+
+    public function testPayrollDatesThrowsExceptionIfIntegersEmpty()
+    {
+        $baseStrategy = new SecondToLastBusinessDayStrategy();
+        $delayedStrategy = new WorkingDayDelayDecorator($baseStrategy, 4);
+        // This interface could be mocked rather than a concrete class used
+
+        $calculator = new PaydayCalculator($delayedStrategy);
+
+        $this->expectException(InvalidArgumentException::class);
+        $calculator->getPayRollDates(0, 0);
+    }
 }
